@@ -40,7 +40,7 @@ def gallery(*keys):
         url, full, cap = site(k)
         items.append(
             f'<button type="button" class="gallery-item" data-full="{full}" data-cap="{cap}" aria-label="Ampliar: {cap}">'
-            f'<img src="{url}" alt="{cap}" loading="lazy"></button>'
+            f'<img src="{url}" alt="{cap}" loading="lazy" referrerpolicy="no-referrer" decoding="async"></button>'
         )
     return "".join(items)
 
@@ -512,7 +512,7 @@ def main():
   <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Imagen ampliada">
     <button type="button" class="lightbox-close" aria-label="Cerrar">×</button>
     <div class="lightbox-inner">
-      <img class="lightbox-img" src="" alt="">
+      <img class="lightbox-img" src="" alt="" referrerpolicy="no-referrer">
       <p class="lightbox-cap"></p>
     </div>
   </div>

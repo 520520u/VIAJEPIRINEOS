@@ -1,5 +1,5 @@
 /* Pirineo Guía — Service Worker offline */
-const CACHE = 'pirineo-guia-v3';
+const CACHE = 'pirineo-guia-v4';
 const APP_SHELL = [
   './',
   './index.html',
@@ -9,7 +9,7 @@ const APP_SHELL = [
   './icons/apple-touch-icon.png',
   './icons/icon.svg'
 ];
-const IMAGE_HOSTS = ['images.unsplash.com'];
+const IMAGE_HOSTS = ['images.unsplash.com', 'upload.wikimedia.org'];
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
