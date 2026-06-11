@@ -39,7 +39,7 @@ MANIFEST = """{
 """
 
 SW_JS = """/* Pirineo Guía — Service Worker offline */
-const CACHE = 'pirineo-guia-v4';
+const CACHE = 'pirineo-guia-v5';
 const APP_SHELL = [
   './',
   './index.html',
@@ -49,7 +49,7 @@ const APP_SHELL = [
   './icons/apple-touch-icon.png',
   './icons/icon.svg'
 ];
-const IMAGE_HOSTS = ['images.unsplash.com', 'upload.wikimedia.org'];
+const IMAGE_HOSTS = ['images.unsplash.com'];
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
@@ -258,6 +258,12 @@ def deploy_dir(target: Path):
     (target / "sw.js").write_text(SW_JS.strip() + "\n", encoding="utf-8")
     for f in (BASE / "icons").glob("*"):
         shutil.copy2(f, icons / f.name)
+    src_images = BASE / "images"
+    if src_images.is_dir():
+        dst_images = target / "images"
+        if dst_images.exists():
+            shutil.rmtree(dst_images)
+        shutil.copytree(src_images, dst_images)
 
 
 def main():

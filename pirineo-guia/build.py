@@ -40,7 +40,7 @@ def gallery(*keys):
         url, full, cap = site(k)
         items.append(
             f'<button type="button" class="gallery-item" data-full="{full}" data-cap="{cap}" aria-label="Ampliar: {cap}">'
-            f'<img src="{url}" alt="{cap}" loading="lazy" referrerpolicy="no-referrer" decoding="async"></button>'
+            f'<img src="{url}" alt="{cap}" loading="lazy" decoding="async"></button>'
         )
     return "".join(items)
 
@@ -48,8 +48,9 @@ def gallery(*keys):
 def spot(key, title, desc):
     url, full, cap = site(key)
     return f"""<li class="spot-item">
-                  <button type="button" class="spot-img spot-zoom" data-full="{full}" data-cap="{cap}" aria-label="Ampliar {title}"
-                    style="background-image:url('{url}')"></button>
+                  <button type="button" class="spot-img spot-zoom" data-full="{full}" data-cap="{cap}" aria-label="Ampliar {title}">
+                    <img src="{url}" alt="{cap}" loading="lazy" decoding="async">
+                  </button>
                   <div class="spot-body"><strong>{title}</strong><span class="spot-desc">{desc}</span></div>
                 </li>"""
 
@@ -198,7 +199,8 @@ def main():
     .spot-list{list-style:none}
     .spot-item{display:flex;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--sand)}
     .spot-item:last-child{border-bottom:none}
-    .spot-img{width:96px;height:76px;flex-shrink:0;border-radius:8px;background-size:cover;background-position:center;border:none;cursor:zoom-in;padding:0}
+    .spot-img{width:96px;height:76px;flex-shrink:0;border-radius:8px;border:none;cursor:zoom-in;padding:0;overflow:hidden}
+    .spot-img img{width:100%;height:100%;object-fit:cover;display:block}
     .spot-body strong{display:block;font-size:.92rem;margin-bottom:.2rem}
     .spot-desc{font-size:.85rem;color:var(--text-muted);line-height:1.45}
     .hike-box{background:var(--pine-pale);border-left:4px solid var(--pine);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:1rem 1.25rem;margin:1rem 0;font-size:.9rem}
