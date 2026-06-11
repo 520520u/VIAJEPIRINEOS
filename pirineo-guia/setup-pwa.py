@@ -229,12 +229,20 @@ def patch_html(html: str) -> str:
     if 'serviceWorker.register' not in html:
         html = html.replace('</body>', PWA_SCRIPT + '\n</body>', 1)
 
-    ios_tip = """        <div class="intro-card"><h3>📱 Usar offline en iOS</h3><p>Abre la guía en Safari → Compartir → «Añadir a pantalla de inicio». Con WiFi la primera vez se cachean textos, mapas e imágenes.</p></div>"""
+    ios_tip = """        <div class="intro-card"><h3>📱 Usar offline en iOS</h3><ol><li>Abre <strong>520vip.space/PIRINEOS</strong> o <strong>520520u.github.io/VIAJEPIRINEOS</strong> en Safari</li><li>Pulsa Compartir → «Añadir a pantalla de inicio»</li><li>Con WiFi la primera vez se cachean textos, mapas e imágenes</li></ol></div>"""
     if 'Usar offline en iOS' not in html and 'id="consejos"' in html:
         html = html.replace(
             '<div class="intro-grid">\n        <div class="intro-card"><h3>🚗 Coche</h3>',
             '<div class="intro-grid">\n' + ios_tip + '\n        <div class="intro-card"><h3>🚗 Coche</h3>',
             1,
+        )
+    elif '520vip.space/PIRINEOS' not in html and 'Usar offline en iOS' in html:
+        html = re.sub(
+            r'<div class="intro-card"><h3>📱 Usar offline en iOS</h3>.*?</div>',
+            ios_tip.strip(),
+            html,
+            count=1,
+            flags=re.DOTALL,
         )
 
     return html
