@@ -20,6 +20,11 @@ IMG = {
     "m10": "photo-1544551763-46a013bb70d5",
     "m11": "photo-1566073771259-6a8506099945",
     "m12": "photo-1520250497591-112f2f40a3f4",
+    "m13": "photo-1464822759023-fed622ff2c3b",
+    "m14": "photo-1519904981063-b0cf448d479e",
+    "m15": "photo-1528360983277-13d401cdc186",
+    "m16": "photo-1493246507139-91e8fad9978e",
+    "m17": "photo-1475924156734-496f6cac6ec1",
 }
 
 
@@ -192,6 +197,98 @@ def main():
         "map-day6", "Jaca",
     )
 
+    days += """
+      <div class="section-intro" style="margin:3rem 0 2rem;padding:1.25rem 1.5rem;background:var(--pine-pale);border-radius:var(--radius-sm);border-left:4px solid var(--pine)">
+        <strong>🇫🇷 Extensión · 5 días en el Pirineo francés</strong><br>
+        A partir del día 7 cruzamos a Francia por Somport. Lescun, Ossau, Cauterets, Gavarnie (UNESCO) y el Tourmalet — regreso a España por Portalet y Bielsa.
+      </div>
+"""
+
+    days += day_block(
+        7, "Franco-español · Aspe", "Canfranc, Somport y Lescun",
+        "92", "1 h 50", "5–8", "2–3 h",
+        "Jaca <span class=\"arrow\">→</span> Canfranc (estación) <span class=\"arrow\">→</span> Somport <span class=\"arrow\">→</span> Lescun",
+        "Cruzamos la frontera por el histórico paso de Somport: la estación Belle Époque de Canfranc, praderas del valle d'Aspe y Lescun, uno de los pueblos más bonitos del Pirineo francés — sin multitudes de agosto.",
+        gallery("m13", "m14", "m6", "m7"),
+        "<li>Visitar la estación internacional de Canfranc (exterior y museo)</li><li>Cruzar Somport hacia Francia — lleva DNI/pasaporte</li><li>Paseo por Lescun y mirador del valle d'Aspe</li><li>Sendero al Chemin de la Mâture o Cascada d'Arrious (según tiempo)</li>",
+        "<li>8:30 Salida Jaca</li><li>9:30 Canfranc — fotos estación</li><li>10:30 Cruce frontera Somport</li><li>12:00 Lescun y comida</li><li>15:00 Sendero valle d'Aspe</li><li>18:00 Paseo nocturno por el pueblo</li>",
+        spot("m13", "Estación de Canfranc", "Palacio ferroviario de 1928 entre montañas: cristaleras, bóvedas de piedra y silencio fronterizo. Uno de los edificios más fotogénicos de los Pirineos.") +
+        spot("m14", "Paso de Somport", "Frontera natural a 1.640 m: praderas, venta de quesos de oveja y el primer cartel en francés. Sensación de cruce de mundo en 5 minutos.") +
+        spot("m6", "Lescun", "Pueblo de casas de piedra y madera en el valle d'Aspe. Panadería con olor a mantequilla, iglesia del s. XII y vistas al Pic d'Anie."),
+        """<div class="hike-box"><strong>🥾 Ruta a pie · Lescun – Cascada d'Arrious</strong><br>
+        ~5 km ida/vuelta · +200 m · 2 h. Bosque y cascada en el valle d'Aspe. Alternativa corta: paseo por el Chemin de la Mâture (mirador). <a href="https://www.pyrenees-ariegeoises.com/" target="_blank" rel="noopener">Turismo Ariège →</a></div>""",
+        "https://www.google.com/maps/dir/Jaca,+Huesca/Canfranc,+Huesca/Lescun,+France",
+        "map-day7", "Canfranc",
+    )
+
+    days += day_block(
+        8, "Valle de Ossau · Francia", "Laruns, Aubisque y Lac de Bious",
+        "88", "2 h", "4–6", "1h 30–2 h",
+        "Lescun <span class=\"arrow\">→</span> Accous <span class=\"arrow\">→</span> Laruns <span class=\"arrow\">→</span> Col du Soulor <span class=\"arrow\">→</span> Gabas",
+        "Día de carreteras de montaña legendarias — Col du Soulor y Aubisque — y el valle de Ossau: prados verdes, ovejas y el espejo turquesa del Lac de Bious-Artigues bajo el Pic du Midi.",
+        gallery("m15", "m16", "m5", "m3"),
+        "<li>Carretera panorámica por Accous y valle d'Aspe</li><li>Laruns: mercado y arquitectura ossalat</li><li>Subida al Col du Soulor (miradores)</li><li>Sendero al Lac de Bious-Artigues desde Gabas</li>",
+        "<li>8:00 Salida Lescun</li><li>10:00 Laruns — café y paseo</li><li>11:30 Col du Soulor (paradas foto)</li><li>13:00 Comida en Gabas</li><li>15:00 Lac de Bious-Artigues</li>",
+        spot("m15", "Laruns", "Capital del valle de Ossau: casas blancas con contraventanas rojas, queserías artesanales y el murmullo del Gave d'Ossau. Auténtico Pirineo francés.") +
+        spot("m16", "Col du Soulor", "Puerto a 1.474 m con curvas de postal y vistas al valle. Uno de los pasos más bonitos del Tour de France — conduce hacia el Aubisque.") +
+        spot("m5", "Lac de Bious-Artigues", "Ibón de montaña a 1.725 m reflejando el Pic du Midi de Ossau. Praderas con flores en junio y silencio absoluto salvo el viento."),
+        """<div class="hike-box"><strong>🥾 Ruta a pie · Gabas – Lac de Bious-Artigues</strong><br>
+        ~3 km ida (6 km total) · +150 m · 1 h ida. Senda ancha y señalizada desde el parking de Gabas. <a href="https://www.pyrenees-national.fr/" target="_blank" rel="noopener">Parc National des Pyrénées →</a></div>""",
+        "https://www.google.com/maps/dir/Lescun,+France/Laruns,+France/Gabas,+France",
+        "map-day8", "Ossau",
+    )
+
+    days += day_block(
+        9, "Cauterets · Francia", "Pont d'Espagne y Lac de Gaube",
+        "68", "1 h 25", "4–6", "2–2h 30",
+        "Laruns <span class=\"arrow\">→</span> Argelès-Gazost <span class=\"arrow\">→</span> Cauterets <span class=\"arrow\">→</span> Pont d'Espagne <span class=\"arrow\">→</span> Lac de Gaube",
+        "El corazón del Parque Nacional francés: pueblo termal de Cauterets, el Puente de España sobre cascadas y el Lac de Gaube — lago glaciar a los pies del Vignemale, el pico más alto del Pirineo francés.",
+        gallery("m17", "m9", "m10", "m2"),
+        "<li>Cauterets: calles victorianas y termas (baño opcional)</li><li>Teleférico o sendero al Pont d'Espagne</li><li>Ruta al Lac de Gaube por el GR-10</li><li>Atardecer con vistas al Vignemale (3.298 m)</li>",
+        "<li>8:30 Salida Laruns</li><li>10:00 Cauterets — paseo pueblo</li><li>11:00 Pont d'Espagne</li><li>12:30 Lac de Gaube — picnic</li><li>16:00 Regreso a Cauterets</li>",
+        spot("m17", "Cauterets", "Pueblo balneario del s. XIX entre bosques: fachadas de madera pintada, olor a azufre suave y ambiente de montaña elegante sin ser pretencioso.") +
+        spot("m9", "Pont d'Espagne", "Puente de piedra sobre cascadas múltiples: bruma, musgo y rugido del agua de deshielo. Puerta de entrada al corazón del parque nacional.") +
+        spot("m10", "Lac de Gaube", "Lago glaciar turquesa a 1.725 m con el Vignemale de fondo. Uno de los paisajes más espectaculares de todo el Pirineo — imprescindible."),
+        """<div class="hike-box"><strong>🥾 Ruta a pie · Pont d'Espagne – Lac de Gaube</strong><br>
+        ~2,5 km ida (5 km total) · +150 m · 45 min ida / 2 h total. Senda GR-10 bien marcada. Teleférico disponible hasta mitad de ruta. <a href="https://www.cauterets.com/" target="_blank" rel="noopener">cauterets.com →</a></div>""",
+        "https://www.google.com/maps/dir/Laruns,+France/Cauterets,+France/Pont+d%27Espagne,+Cauterets",
+        "map-day9", "Gaube",
+    )
+
+    days += day_block(
+        10, "Gavarnie · UNESCO", "Cirque de Gavarnie y Grande Cascade",
+        "42", "1 h", "6–8", "2h 30–3 h",
+        "Cauterets <span class=\"arrow\">→</span> Luz-Saint-Sauveur <span class=\"arrow\">→</span> Gavarnie <span class=\"arrow\">→</span> Cirque de Gavarnie",
+        "Víctor Hugo lo llamó «el coloso de la naturaleza»: un anfiteatro de paredes de 1.500 m, la cascada más alta de Francia (423 m) y un pueblo de montaña donde el tiempo se mide en mulas y queso de oveja.",
+        gallery("m1", "m4", "m11", "m8"),
+        "<li>Luz-Saint-Sauveur: fortalezas Vauban y puentes históricos</li><li>Gavarnie: iglesia románica y artesanía local</li><li>Sendero al Cirque de Gavarnie (UNESCO)</li><li>Grande Cascade de Gavarnie — lleva chubasquero</li>",
+        "<li>9:00 Salida Cauterets</li><li>10:00 Luz — parada café</li><li>10:45 Gavarnie</li><li>11:30 Inicio sendero cirque</li><li>14:00 Grande Cascade — comida mochila</li><li>17:00 Regreso pueblo</li>",
+        spot("m1", "Cirque de Gavarnie", "Anfiteatro glaciar de 1.500 m de pared vertical. Eco de cascadas, silencio de roca y la sensación de estar dentro de una catedral natural.") +
+        spot("m4", "Grande Cascade", "423 m de caída libre — la cascada más alta de Francia metropolitana. En primavera el caudal es máximo; la bruma moja a 100 m de distancia.") +
+        spot("m11", "Gavarnie", "Pueblo a 1.400 m con casas de piedra gris, queserías y burros que suben al cirque. Auténtico, aunque con turismo — evita agosto si puedes."),
+        """<div class="hike-box"><strong>🥾 Ruta a pie · Gavarnie – Cirque – Grande Cascade</strong><br>
+        ~6 km ida/vuelta · +200 m · 2 h 30–3 h. Senda ancha sin dificultad técnica. Patrimonio UNESCO. <a href="https://www.gavarnie.com/" target="_blank" rel="noopener">gavarnie.com →</a></div>""",
+        "https://www.google.com/maps/dir/Cauterets,+France/Luz-Saint-Sauveur,+France/Gavarnie,+France",
+        "map-day10", "Gavarnie",
+    )
+
+    days += day_block(
+        11, "Tourmalet · Regreso", "Col du Tourmalet, Payolle y Bielsa",
+        "118", "2 h 30", "3–5", "1–1h 30",
+        "Gavarnie <span class=\"arrow\">→</span> Col du Tourmalet <span class=\"arrow\">→</span> Lac de Payolle <span class=\"arrow\">→</span> Arreau <span class=\"arrow\">→</span> Portalet <span class=\"arrow\">→</span> Bielsa",
+        "Último día épico: subimos el mítico Tourmalet (2.115 m), lagos de Payolle entre abetos y regresamos a España por el puerto de Portalet — cierre perfecto cruzando de nuevo la frontera.",
+        gallery("m12", "m5", "m6", "m3"),
+        "<li>Col du Tourmalet — cumbre del mito ciclista</li><li>Lac de Payolle: paseo ribereño entre pinos</li><li>Arreau: pueblo del valle d'Aure</li><li>Regreso a España por Portalet → valle de Bielsa</li>",
+        "<li>8:00 Salida Gavarnie</li><li>9:30 Col du Tourmalet (foto cumbre)</li><li>10:30 Lac de Payolle</li><li>12:00 Arreau — comida</li><li>14:30 Portalet → Bielsa</li><li>16:30 Fin del viaje</li>",
+        spot("m12", "Col du Tourmalet", "Puerto a 2.115 m, el más alto del Tour de France asfaltado. Vistas 360° sobre valles y picos — puede haber nieve en junio, lleva chaqueta.") +
+        spot("m5", "Lac de Payolle", "Lago de montaña rodeado de hayas y abetos a 1.130 m. Praderas verdes, silencio y el reflejo del Pic du Midi de Bigorre en días claros.") +
+        spot("m6", "Bielsa · Parque de Bielsa", "Regreso al Pirineo aragonés: casco medieval, túnel de Bielsa-Fabrega hacia Francia y la puerta al Parque de Ordesa por el otro lado. Despedida pirenaica.") ,
+        """<div class="hike-box"><strong>🥾 Ruta a pie · Lac de Payolle (paseo)</strong><br>
+        ~3 km ida/vuelta · llano · 1 h. Rodeo del lago entre bosque. Ideal para estirar piernas tras el Tourmalet. Comprobar estado del Portalet en <a href="https://www.turismodearagon.com/" target="_blank" rel="noopener">Turismo Aragón</a>.</div>""",
+        "https://www.google.com/maps/dir/Gavarnie,+France/Col+du+Tourmalet/Lac+de+Payolle,+France/Bielsa,+Huesca",
+        "map-day11", "Tourmalet",
+    )
+
     hero_url = u("hero", 1920)
     img = {k: u(k) for k in IMG if k != "hero"}
 
@@ -201,7 +298,7 @@ def main():
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#2d5a3d">
-  <title>Pirineo · Guía 6 Días · Primavera</title>
+  <title>Pirineo · Guía 11 Días · España & Francia</title>
   <style>
     :root {
       --pine: #2d5a3d; --pine-light: #4a7c59; --pine-pale: #e8f0ea;
@@ -300,7 +397,7 @@ def main():
       section{padding:3.5rem 0}
       .nav-toggle{display:flex;align-items:center;justify-content:center}
       .site-nav{position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,.98);border-bottom:1px solid var(--sand-dark);max-height:0;overflow:hidden;opacity:0;transition:max-height .3s,opacity .25s}
-      .site-nav.is-open{max-height:360px;opacity:1}
+      .site-nav.is-open{max-height:480px;opacity:1}
       .site-nav ul{flex-direction:column;padding:.75rem 1.25rem 1rem}
       .site-nav a{display:block;padding:.6rem 0;font-size:.9rem}
       .leaflet-map--fullroute{height:320px}
@@ -327,13 +424,13 @@ def main():
   <header class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <span class="hero-tag">🏔️ Guía primavera · Aragón & Navarra</span>
-      <h1>Pirineo<br><em>Seis días entre cumbres</em></h1>
-      <p class="hero-sub">Un road trip lento por el Pirineo central: Ordesa, Sobrarbe, Benasque, Tena, Hecho y Jaca. Cascadas, ibones, pueblos de piedra y rutas a pie de medio día — sin cruzar media península cada mañana.</p>
+      <span class="hero-tag">🏔️ Guía primavera · España & Francia</span>
+      <h1>Pirineo<br><em>Once días entre dos países</em></h1>
+      <p class="hero-sub">Road trip por el Pirineo central español y el Parque Nacional francés: Ordesa, Sobrarbe, Benasque, Canfranc, Gavarnie, Cauterets y el Tourmalet. Paisajes espectaculares, pueblos auténticos y rutas a pie de medio día.</p>
       <div class="hero-meta">
         <span>🌸 Mayo–junio ideal</span>
-        <span>🚗 ~505 km totales</span>
-        <span>🥾 5 rutas a pie incluidas</span>
+        <span>🚗 ~920 km totales</span>
+        <span>🥾 10 rutas a pie incluidas</span>
       </div>
     </div>
   </header>
@@ -342,11 +439,12 @@ def main():
     <div class="container">
       <p class="section-label">Bienvenida</p>
       <h2 class="section-title">Por qué el Pirineo en primavera</h2>
-      <p class="section-intro">Mayo y junio son el momento dorado: hayas y bosques en verde intenso, cascadas al máximo caudal del deshielo, menos turistas que en agosto y temperaturas agradables para caminar (15–22 °C en valle). Esta guía recorre un circuito lógico por Huesca y Navarra en 6 días.</p>
+      <p class="section-intro">Mayo y junio son el momento dorado: hayas y bosques en verde intenso, cascadas al máximo caudal del deshielo, menos turistas que en agosto y temperaturas agradables para caminar (15–22 °C en valle). Esta guía recorre 6 días por Aragón y Navarra, más 5 días extra cruzando a Francia por Somport y regresando por Portalet.</p>
       <div class="intro-grid">
         <div class="intro-card"><h3>🌸 Primavera activa</h3><p>Flores en praderas, nieve en picos altos pero senderos accesibles hasta 2.000 m. Lleva capas: mañana fría, mediodía templado.</p></div>
-        <div class="intro-card"><h3>🗺️ Cinco rutas a pie</h3><p>Ordesa, Sobrarbe, Estós, ibones de Tena y Selva de Oza — desde paseos familiares a medias jornadas de montaña.</p></div>
-        <div class="intro-card"><h3>🏘️ Pueblos auténticos</h3><p>Aínsa, Ansó, Sallent, Torla, Benasque… Arquitectura de piedra, ritmo lento y gastronomía de montaña sin filas de agosto.</p></div>
+        <div class="intro-card"><h3>🗺️ Diez rutas a pie</h3><p>Ordesa, Estós, Gaube, Gavarnie, Bious-Artigues… Desde paseos familiares a medias jornadas con vistas de postal.</p></div>
+        <div class="intro-card"><h3>🏘️ Pueblos auténticos</h3><p>Aínsa, Ansó, Lescun, Laruns, Cauterets, Gavarnie… Arquitectura de piedra, queserías artesanales y ritmo lento sin filas de agosto.</p></div>
+        <div class="intro-card"><h3>🇫🇷 Cruce frontera</h3><p>Somport y Portalet conectan España y Francia. Lleva DNI/pasaporte, euros en efectivo y comprueba estado de puertos en primavera.</p></div>
       </div>
     </div>
   </section>
@@ -355,10 +453,10 @@ def main():
     <div class="container">
       <p class="section-label">Visión global</p>
       <h2 class="section-title">Mapa de la ruta completa</h2>
-      <p class="section-intro">Los 6 días en un solo mapa. Cada color es un día de conducción; los marcadores numerados son las paradas principales. Funciona sin conexión.</p>
+      <p class="section-intro">Los 11 días en un solo mapa. D1–D6 en España; D7–D11 en Francia y regreso. Cada color es un día de conducción. Funciona sin conexión.</p>
       <div class="map-wrap">
-        <div id="map-full-route" class="leaflet-map leaflet-map--fullroute" role="img" aria-label="Mapa ruta completa Pirineo 6 días"></div>
-        <p class="map-caption">🗺️ ~505 km en coche · 5 rutas senderistas · Pellizca para zoom</p>
+        <div id="map-full-route" class="leaflet-map leaflet-map--fullroute" role="img" aria-label="Mapa ruta completa Pirineo 11 días"></div>
+        <p class="map-caption">🗺️ ~920 km en coche · 10 rutas senderistas · Pellizca para zoom</p>
       </div>
       <div class="route-legend">
         <span><span class="legend-dot" style="background:#3d6b4f"></span>D1 Ordesa</span>
@@ -367,6 +465,11 @@ def main():
         <span><span class="legend-dot" style="background:#c4874a"></span>D4 Tena</span>
         <span><span class="legend-dot" style="background:#2d5a3d"></span>D5 Hecho</span>
         <span><span class="legend-dot" style="background:#5c5346"></span>D6 Jaca</span>
+        <span><span class="legend-dot" style="background:#7d6b5a"></span>D7 Canfranc</span>
+        <span><span class="legend-dot" style="background:#2e6b8a"></span>D8 Ossau</span>
+        <span><span class="legend-dot" style="background:#456b8c"></span>D9 Gaube</span>
+        <span><span class="legend-dot" style="background:#8a6b2e"></span>D10 Gavarnie</span>
+        <span><span class="legend-dot" style="background:#6b3a5c"></span>D11 Tourmalet</span>
       </div>
     </div>
   </section>
@@ -374,8 +477,8 @@ def main():
   <section id="itinerario">
     <div class="container">
       <p class="section-label">Día a día</p>
-      <h2 class="section-title">Itinerario 6 días</h2>
-      <p class="section-intro">Cada jornada combina conducción corta (máx. ~2 h), paradas en pueblos y una ruta a pie destacada. Distancias y tiempos orientativos en condiciones normales de primavera.</p>
+      <h2 class="section-title">Itinerario 11 días</h2>
+      <p class="section-intro">Días 1–6 por el Pirineo aragonés y navarro. Días 7–11 cruzan a Francia (Hautes-Pyrénées) y regresan por Portalet. Cada jornada combina conducción corta, pueblos auténticos y una ruta a pie destacada.</p>
       __DAYS__
     </div>
   </section>
@@ -442,8 +545,58 @@ def main():
             <p class="card-zone">D6 · Jaca</p>
             <h3>Hotel Conde Aznar</h3>
             <span class="card-style">Hotel céntrico · Jaca</span>
-            <p>En el corazón de Jaca, cerca de la ciudadela. Perfecto para la última noche o antes de volver a Zaragoza.</p>
+            <p>En el corazón de Jaca, cerca de la ciudadela. Perfecto para la noche antes de cruzar a Francia por Somport.</p>
             <p><a href="https://www.google.com/maps/search/Hotel+Conde+Aznar+Jaca" target="_blank" rel="noopener">Ver en Google Maps →</a></p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img" style="background-image:url('__IMG_M13__')"></div>
+          <div class="card-body">
+            <p class="card-zone">D7 · Lescun</p>
+            <h3>La Breche de Roland · Lescun</h3>
+            <span class="card-style">Hotel montaña · Valle d'Aspe</span>
+            <p>En el corazón del pueblo más bonito del valle d'Aspe. Vistas al Pic d'Anie, cenas caseras y ambiente pirenaico auténtico.</p>
+            <p><a href="https://www.google.com/maps/search/La+Breche+de+Roland+Lescun" target="_blank" rel="noopener">Ver en Google Maps →</a></p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img" style="background-image:url('__IMG_M15__')"></div>
+          <div class="card-body">
+            <p class="card-zone">D8 · Laruns / Gabas</p>
+            <h3>Hotel Gabizos · Laruns</h3>
+            <span class="card-style">Hotel · Valle de Ossau</span>
+            <p>Base ideal para el Col du Soulor y el Lac de Bious. Arquitectura tradicional ossalat con confort moderno.</p>
+            <p><a href="https://www.google.com/maps/search/Hotel+Gabizos+Laruns" target="_blank" rel="noopener">Ver en Google Maps →</a></p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img" style="background-image:url('__IMG_M17__')"></div>
+          <div class="card-body">
+            <p class="card-zone">D9 · Cauterets</p>
+            <h3>Le Lion d'Or · Cauterets</h3>
+            <span class="card-style">Hotel con encanto · Termas</span>
+            <p>En el centro del pueblo balneario. A dos pasos del teleférico a Gaube y de las termas. Ambiente victoriano de montaña.</p>
+            <p><a href="https://www.google.com/maps/search/Hotel+Lion+d+Or+Cauterets" target="_blank" rel="noopener">Ver en Google Maps →</a></p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img" style="background-image:url('__IMG_M1__')"></div>
+          <div class="card-body">
+            <p class="card-zone">D10 · Gavarnie / Luz</p>
+            <h3>Hotel Brèche de Roland · Luz</h3>
+            <span class="card-style">Hotel · Valle de Gavarnie</span>
+            <p>En Luz-Saint-Sauveur, a 15 min de Gavarnie. Fortalezas Vauban, puentes históricos y acceso temprano al cirque.</p>
+            <p><a href="https://www.google.com/maps/search/Hotel+Breche+de+Roland+Luz+Saint+Sauveur" target="_blank" rel="noopener">Ver en Google Maps →</a></p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img" style="background-image:url('__IMG_M12__')"></div>
+          <div class="card-body">
+            <p class="card-zone">D11 · Arreau / Bielsa</p>
+            <h3>Le Néouvielle · Arreau</h3>
+            <span class="card-style">Hotel · Valle d'Aure</span>
+            <p>Última noche en Francia o parada antes de cruzar Portalet. Pueblo tranquilo del valle d'Aure, cerca del Tourmalet.</p>
+            <p><a href="https://www.google.com/maps/search/Hotel+Neouvielle+Arreau" target="_blank" rel="noopener">Ver en Google Maps →</a></p>
           </div>
         </article>
       </div>
@@ -460,7 +613,10 @@ def main():
         <div class="link-card"><h3>Turismo Navarra</h3><p>Valle de Hecho, Ansó y Roncal.</p><a href="https://www.turismo.navarra.es/" target="_blank" rel="noopener">turismo.navarra.es →</a></div>
         <div class="link-card"><h3>AEMET · Meteo</h3><p>Predicción por municipios — imprescindible en montaña.</p><a href="https://www.aemet.es/" target="_blank" rel="noopener">aemet.es →</a></div>
         <div class="link-card"><h3>Wikiloc</h3><p>Tracks GPS de senderos verificados por la comunidad.</p><a href="https://es.wikiloc.com/" target="_blank" rel="noopener">wikiloc.com →</a></div>
-        <div class="link-card"><h3>FEDME · Refugios</h3><p>Refugios de montaña y estado de rutas de alta montaña.</p><a href="https://www.fedme.es/" target="_blank" rel="noopener">fedme.es →</a></div>
+        <div class="link-card"><h3>Parc National des Pyrénées</h3><p>Senderos, refugios y estado de rutas en el Pirineo francés.</p><a href="https://www.pyrenees-national.fr/" target="_blank" rel="noopener">pyrenees-national.fr →</a></div>
+        <div class="link-card"><h3>Cauterets & Gaube</h3><p>Teleférico, Pont d'Espagne y actividades en la zona.</p><a href="https://www.cauterets.com/" target="_blank" rel="noopener">cauterets.com →</a></div>
+        <div class="link-card"><h3>Gavarnie · UNESCO</h3><p>Info del cirque, horarios y condiciones del sendero.</p><a href="https://www.gavarnie.com/" target="_blank" rel="noopener">gavarnie.com →</a></div>
+        <div class="link-card"><h3>Météo-France</h3><p>Meteorología en Francia — complementa AEMET en la frontera.</p><a href="https://meteofrance.com/" target="_blank" rel="noopener">meteofrance.com →</a></div>
       </div>
     </div>
   </section>
@@ -470,16 +626,17 @@ def main():
       <p class="section-label">Práctico</p>
       <h2 class="section-title">Consejos esenciales</h2>
       <div class="intro-grid">
-        <div class="intro-card"><h3>🚗 Coche</h3><p>Imprescindible. Mejor recogida en Zaragoza (2 h a Jaca) o Huesca. Cadenas en maletero hasta junio en puertos altos. Gasolina en pueblos — reposta antes de subir a valles.</p></div>
-        <div class="intro-card"><h3>🥾 Equipo senderismo</h3><p>Botas impermeables, bastones, cortavientos y chubasquero. Capas térmicas: en Ordesa hace frío a las 8:00 aunque en junio haya calor al mediodía.</p></div>
-        <div class="intro-card"><h3>📋 Permisos Ordesa</h3><p>En temporada alta puede haber control de acceso en Pradera — consulta ordesa.net. Bus desde Torla disponible en verano.</p></div>
+        <div class="intro-card"><h3>🚗 Coche</h3><p>Imprescindible. Mejor recogida en Zaragoza (2 h a Jaca) o Pau/Tarbes si empiezas por Francia. Cadenas en maletero hasta junio en puertos altos (Tourmalet, Aubisque). Reposta antes de subir a valles.</p></div>
+        <div class="intro-card"><h3>🇫🇷 Frontera</h3><p>DNI o pasaporte en vigor. Somport (D7) y Portalet (D11) suelen abiertos todo el año, pero comprueba nieve en primavera. Algunos peajes/túneles aceptan tarjeta; lleva euros.</p></div>
+        <div class="intro-card"><h3>🥾 Equipo senderismo</h3><p>Botas impermeables, bastones, cortavientos y chubasquero. Capas térmicas: en Ordesa o Gavarnie hace frío a las 8:00 aunque en junio haya calor al mediodía.</p></div>
+        <div class="intro-card"><h3>🧀 Gastronomía franco-española</h3><p>España: ternasco, chiretas, queso de Tronchón. Francia: garbure (sopa montaña), tomme de brebis (queso oveja), gateau à la broche. Prueba en Lescun, Laruns y Gavarnie.</p></div>
       </div>
     </div>
   </section>
 
   <footer>
     <em>El Pirineo te espera en verde 🏔️🌸</em>
-    <p>Guía primavera · Aragón & Navarra · Mapas Leaflet offline</p>
+    <p>Guía primavera · España & Francia · Mapas Leaflet offline</p>
   </footer>
 
 __LEAFLET__

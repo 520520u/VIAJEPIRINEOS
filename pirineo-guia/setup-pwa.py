@@ -19,7 +19,7 @@ PWA_HEAD = """  <meta name="apple-mobile-web-app-capable" content="yes">
 """
 
 MANIFEST = """{
-  "name": "Pirineo · Guía 6 Días · Primavera",
+  "name": "Pirineo · Guía 11 Días · ES/FR",
   "short_name": "Pirineo",
   "description": "Guía de viaje por el Pirineo aragonés y navarro con mapas offline, rutas a pie y alojamientos.",
   "lang": "es",
@@ -39,7 +39,7 @@ MANIFEST = """{
 """
 
 SW_JS = """/* Pirineo Guía — Service Worker offline */
-const CACHE = 'pirineo-guia-v1';
+const CACHE = 'pirineo-guia-v2';
 const APP_SHELL = [
   './',
   './index.html',

@@ -1,21 +1,23 @@
-/* Mapas Pirineo — Leaflet offline */
+/* Mapas Pirineo — Leaflet offline (España + Francia) */
 (function () {
   'use strict';
   var COLORS = {
     sea: '#4a7c9b', sand: '#e8e2d6', pine: '#2d5a3d', stone: '#5c5346',
     route: '#c4874a', snow: '#f4f7fa',
-    d1: '#3d6b4f', d2: '#4a7c9b', d3: '#6b5a8a', d4: '#c4874a', d5: '#2d5a3d', d6: '#5c5346'
+    d1: '#3d6b4f', d2: '#4a7c9b', d3: '#6b5a8a', d4: '#c4874a', d5: '#2d5a3d', d6: '#5c5346',
+    d7: '#7d6b5a', d8: '#2e6b8a', d9: '#456b8c', d10: '#8a6b2e', d11: '#6b3a5c'
   };
 
-  /* Contorno aproximado del corredor Pirineo central (Aragón + Navarra) */
+  /* Corredor Pirineo central: Aragón, Navarra y Hautes-Pyrénées */
   var REGION = {
-    type: 'Feature', properties: { name: 'Pirineo central' },
+    type: 'Feature', properties: { name: 'Pirineo central · ES/FR' },
     geometry: { type: 'Polygon', coordinates: [[
-      [-0.92, 42.46], [-0.88, 42.40], [-0.72, 42.38], [-0.55, 42.37],
-      [-0.35, 42.38], [-0.12, 42.40], [0.08, 42.39], [0.28, 42.42],
-      [0.48, 42.46], [0.58, 42.52], [0.62, 42.62], [0.55, 42.72],
-      [0.38, 42.80], [0.12, 42.84], [-0.12, 42.85], [-0.38, 42.83],
-      [-0.62, 42.80], [-0.82, 42.74], [-0.92, 42.62], [-0.92, 42.46]
+      [-0.95, 42.48], [-0.85, 42.42], [-0.65, 42.38], [-0.45, 42.37],
+      [-0.25, 42.38], [-0.05, 42.40], [0.15, 42.42], [0.35, 42.46],
+      [0.50, 42.52], [0.58, 42.62], [0.55, 42.72], [0.38, 42.80],
+      [0.20, 42.88], [0.30, 42.98], [0.28, 43.08], [0.10, 43.15],
+      [-0.15, 43.22], [-0.40, 43.25], [-0.65, 43.18], [-0.78, 43.05],
+      [-0.85, 42.92], [-0.92, 42.78], [-0.95, 42.65], [-0.95, 42.48]
     ]] }
   };
 
@@ -27,7 +29,13 @@
     sallent: [-0.417, 42.773], hecho: [-0.747, 42.739], anso: [-0.833, 42.758],
     oza: [-0.685, 42.781], santaCruz: [-0.675, 42.523], sanJuanPena: [-0.667, 42.507],
     fiscal: [-0.095, 42.488], campo: [0.285, 42.535], villanua: [-0.380, 42.650],
-    puertoPiedrafita: [-0.320, 42.688], puenteLaReina: [-0.620, 42.720]
+    puertoPiedrafita: [-0.320, 42.688], puenteLaReina: [-0.620, 42.720],
+    canfranc: [-0.527, 42.760], somport: [-0.546, 42.793], lescun: [-0.583, 42.871],
+    accous: [-0.593, 43.035], laruns: [-0.429, 43.055], colSoulor: [-0.383, 42.995],
+    gabas: [-0.335, 42.939], argelles: [-0.084, 43.030], cauterets: [-0.116, 42.888],
+    pontEspagne: [-0.157, 42.846], gaube: [-0.171, 42.818], gavarnie: [-0.009, 42.735], luz: [-0.003, 42.870],
+    payolle: [-0.180, 42.799], tourmalet: [-0.145, 42.907], arreau: [0.260, 42.906],
+    bielsa: [-0.222, 42.652], portalet: [-0.372, 42.799]
   };
 
   var DAYS = {
@@ -90,6 +98,56 @@
         { ll: POIS.sanJuanPena, name: 'San Juan de la Peña', n: 4 }
       ],
       path: [POIS.anso, POIS.hecho, POIS.jaca, POIS.santaCruz, POIS.sanJuanPena]
+    },
+    day7: {
+      color: COLORS.d7,
+      stops: [
+        { ll: POIS.jaca, name: 'Jaca', n: 1 },
+        { ll: POIS.canfranc, name: 'Canfranc (estación)', n: 2 },
+        { ll: POIS.somport, name: 'Paso de Somport', n: 3 },
+        { ll: POIS.lescun, name: 'Lescun (Francia)', n: 4 }
+      ],
+      path: [POIS.jaca, POIS.canfranc, POIS.somport, POIS.lescun]
+    },
+    day8: {
+      color: COLORS.d8,
+      stops: [
+        { ll: POIS.lescun, name: 'Lescun', n: 1 },
+        { ll: POIS.accous, name: 'Accous · Valle de Aspe', n: 2 },
+        { ll: POIS.laruns, name: 'Laruns · Valle de Ossau', n: 3 },
+        { ll: POIS.gabas, name: 'Gabas · Lac Bious', n: 4 }
+      ],
+      path: [POIS.lescun, POIS.accous, POIS.laruns, POIS.colSoulor, POIS.gabas]
+    },
+    day9: {
+      color: COLORS.d9,
+      stops: [
+        { ll: POIS.laruns, name: 'Laruns', n: 1 },
+        { ll: POIS.cauterets, name: 'Cauterets', n: 2 },
+        { ll: POIS.pontEspagne, name: 'Pont d\'Espagne', n: 3 },
+        { ll: POIS.gaube, name: 'Lac de Gaube', n: 4 }
+      ],
+      path: [POIS.laruns, POIS.argelles, POIS.cauterets, POIS.pontEspagne, POIS.gaube]
+    },
+    day10: {
+      color: COLORS.d10,
+      stops: [
+        { ll: POIS.cauterets, name: 'Cauterets', n: 1 },
+        { ll: POIS.luz, name: 'Luz-Saint-Sauveur', n: 2 },
+        { ll: POIS.gavarnie, name: 'Gavarnie', n: 3 },
+        { ll: POIS.gavarnie, name: 'Cirque de Gavarnie', n: 4 }
+      ],
+      path: [POIS.cauterets, POIS.luz, POIS.gavarnie, POIS.gavarnie]
+    },
+    day11: {
+      color: COLORS.d11,
+      stops: [
+        { ll: POIS.gavarnie, name: 'Gavarnie', n: 1 },
+        { ll: POIS.tourmalet, name: 'Col du Tourmalet', n: 2 },
+        { ll: POIS.payolle, name: 'Lac de Payolle', n: 3 },
+        { ll: POIS.bielsa, name: 'Bielsa (España)', n: 4 }
+      ],
+      path: [POIS.gavarnie, POIS.luz, POIS.tourmalet, POIS.payolle, POIS.arreau, POIS.portalet, POIS.bielsa]
     }
   };
 
@@ -99,7 +157,12 @@
     { key: 'day3', label: 'D3 · Benasque', color: COLORS.d3 },
     { key: 'day4', label: 'D4 · Tena', color: COLORS.d4 },
     { key: 'day5', label: 'D5 · Hecho', color: COLORS.d5 },
-    { key: 'day6', label: 'D6 · Jaca', color: COLORS.d6 }
+    { key: 'day6', label: 'D6 · Jaca', color: COLORS.d6 },
+    { key: 'day7', label: 'D7 · Canfranc', color: COLORS.d7 },
+    { key: 'day8', label: 'D8 · Ossau', color: COLORS.d8 },
+    { key: 'day9', label: 'D9 · Gaube', color: COLORS.d9 },
+    { key: 'day10', label: 'D10 · Gavarnie', color: COLORS.d10 },
+    { key: 'day11', label: 'D11 · Tourmalet', color: COLORS.d11 }
   ];
 
   var maps = {}, pending = [];
@@ -115,7 +178,7 @@
   function baseMapOptions() {
     return {
       zoomControl: true, attributionControl: false, tap: true, touchZoom: true,
-      preferCanvas: true, maxBounds: [[42.30, -1.0], [42.92, 0.72]], maxBoundsViscosity: 0.85
+      preferCanvas: true, maxBounds: [[42.30, -1.0], [43.30, 0.75]], maxBoundsViscosity: 0.85
     };
   }
 
@@ -144,7 +207,7 @@
   function initFullRoute() {
     var el = document.getElementById('map-full-route');
     if (!el || maps.fullRoute) return;
-    var map = L.map(el, baseMapOptions()).setView([42.58, -0.15], 9);
+    var map = L.map(el, baseMapOptions()).setView([42.72, -0.25], 8);
     addRegion(map);
     var all = [];
     FULL.forEach(function (entry) {
@@ -156,7 +219,7 @@
           .bindPopup('<strong>' + entry.label + '</strong><br>' + p.n + '. ' + p.name).addTo(map);
       });
     });
-    if (all.length) map.fitBounds(L.latLngBounds(all), { padding: [40, 40], maxZoom: 10 });
+    if (all.length) map.fitBounds(L.latLngBounds(all), { padding: [40, 40], maxZoom: 9 });
     maps.fullRoute = map;
     setTimeout(function () { map.invalidateSize(); }, 120);
   }
@@ -188,7 +251,7 @@
   }
 
   registerMap('map-full-route', null);
-  for (var d = 1; d <= 6; d++) registerMap('map-day' + d, 'day' + d);
+  for (var d = 1; d <= 11; d++) registerMap('map-day' + d, 'day' + d);
 
   function onReady() {
     observeMaps();

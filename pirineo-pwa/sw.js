@@ -1,5 +1,5 @@
 /* Pirineo Guía — Service Worker offline */
-const CACHE = 'pirineo-guia-v1';
+const CACHE = 'pirineo-guia-v2';
 const APP_SHELL = [
   './',
   './index.html',
